@@ -28,8 +28,8 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn develop",
-    "build": "gatsby build",
     "develop": "gatsby develop",
+    "build": "gatsby build",
     "lint": "yarn lint:fix",
     "lint:fix": "prettier --write \"src/**/*.{js,jsx}\""
   },
