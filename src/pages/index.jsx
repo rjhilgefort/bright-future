@@ -1,10 +1,15 @@
 import React from 'react'
+import { Row, Col } from 'antd'
 import Layout from '../components/Layout'
+import BrightFutureImage from '../components/BrightFutureImage'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Something else</h1>
-    <p>I'm some content!</p>
+    <Row>
+      <Col span={18} offset={3}>
+        <BrightFutureImage />
+      </Col>
+    </Row>
   </Layout>
 )
 
