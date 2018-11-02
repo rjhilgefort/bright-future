@@ -58,7 +58,7 @@ const Layout = ({ children }) => (
                     <Link to="/">Home</Link>
                   </MenuItemSC>
                   <MenuItemSC key="2">
-                    <Link to="/">About</Link>
+                    <Link to="/">Blahahahaha</Link>
                   </MenuItemSC>
                   <MenuItemSC key="3">
                     <Link to="/">Contact</Link>
