@@ -5,11 +5,8 @@ import BrightFutureImage from '../components/BrightFutureImage'
 
 const IndexPage = () => (
   <Layout>
-    <Row>
-      <Col span={18} offset={3}>
-        <BrightFutureImage />
-      </Col>
-    </Row>
+    <p>HI</p>
+    {/* <BrightFutureImage /> */}
   </Layout>
 )
 
