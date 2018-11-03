@@ -6,21 +6,25 @@ import BrightFutureImage from './BrightFutureImage'
 
 const { Header } = Layout
 
-const logoSize = 80;
+const logoSize = 100;
 
 const HeaderSC = styled(Header)`
   background-color: white;
   height: 100%;
   z-index: 500;
-  border-bottom: 1px solid black;
 `
 const MenuSC = styled(Menu)`
-  margin-top: ${logoSize - 40}px;
+  margin-top: ${logoSize * .35}px;
   border-bottom: none;
   float: right;
   z-index: 500;
+  font-size: ${logoSize * .25}px;
 `
-const MenuItemSC = styled(Menu.Item)``
+const MenuItemSC = styled(Menu.Item)`
+  > a {
+    padding-bottom: ${logoSize * .25}px;
+  }
+`
 
 const LogoContainer = styled.div`
   width: ${logoSize}px;
@@ -38,7 +42,7 @@ const SiteHeader = () => (
           </Link>
         </LogoContainer>
       </Col>
-      <Col offset={14} span={4}>
+      <Col offset={4} span={14}>
         <MenuSC mode="horizontal" defaultSelectedKeys={['1']}>
           <MenuItemSC key="1">
             <Link to="/">Home</Link>
@@ -55,4 +59,4 @@ const SiteHeader = () => (
   </HeaderSC>
 )
 
-export default SiteHeader 
+export default SiteHeader
