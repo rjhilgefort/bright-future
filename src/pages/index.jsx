@@ -1,15 +1,11 @@
 import React from 'react'
-import { Row, Col } from 'antd'
 import Layout from '../components/Layout'
-import BrightFutureImage from '../components/BrightFutureImage'
+import TourCarousel from '../components/TourCarousel'
 
-const IndexPage = () => (
-  <Layout>
-    <Row>
-      <Col span={18} offset={3}>
-        <BrightFutureImage />
-      </Col>
-    </Row>
+const IndexPage = ({ location }) => (
+  <Layout location={location}>
+    <h1>Index</h1>
+    <TourCarousel />
   </Layout>
 )
 

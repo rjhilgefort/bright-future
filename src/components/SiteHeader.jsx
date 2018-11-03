@@ -1,62 +1,39 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { Layout, Menu, Row, Col } from 'antd'
+import * as _ from 'ramda'
 import BrightFutureImage from './BrightFutureImage'
+import * as S from './SiteHeader.style'
 
-const { Header } = Layout
+const SiteHeader = ({ location: { pathname } }) => {
+  const isActive = _.compose(
+    x => (x ? 1 : 0),
+    _.equals(pathname),
+  )
 
-const logoSize = 100;
-
-const HeaderSC = styled(Header)`
-  background-color: white;
-  height: 100%;
-  z-index: 500;
-`
-const MenuSC = styled(Menu)`
-  margin-top: ${logoSize * .35}px;
-  border-bottom: none;
-  float: right;
-  z-index: 500;
-  font-size: ${logoSize * .25}px;
-`
-const MenuItemSC = styled(Menu.Item)`
-  > a {
-    padding-bottom: ${logoSize * .25}px;
-  }
-`
-
-const LogoContainer = styled.div`
-  width: ${logoSize}px;
-  height: ${logoSize}px;
-  margin-top: 5px;
-`
-
-const SiteHeader = () => (
-  <HeaderSC>
-    <Row>
-      <Col span={6}>
-        <LogoContainer>
+  return (
+    <S.HeaderContainer>
+      <S.Header>
+        <S.LogoContainer>
           <Link to="/">
             <BrightFutureImage />
           </Link>
-        </LogoContainer>
-      </Col>
-      <Col offset={4} span={14}>
-        <MenuSC mode="horizontal" defaultSelectedKeys={['1']}>
-          <MenuItemSC key="1">
-            <Link to="/">Home</Link>
-          </MenuItemSC>
-          <MenuItemSC key="2">
-            <Link to="/">About</Link>
-          </MenuItemSC>
-          <MenuItemSC key="3">
-            <Link to="/">Contact</Link>
-          </MenuItemSC>
-        </MenuSC>
-      </Col>
-    </Row>
-  </HeaderSC>
-)
+        </S.LogoContainer>
+
+        <S.Menu>
+          <S.MenuItem to="/" active={isActive('/')}>
+            Home
+          </S.MenuItem>
+          <S.MenuItem to="/about" active={isActive('/about')}>
+            About
+          </S.MenuItem>
+          <S.MenuItem to="/contact" active={isActive('/contact')}>
+            Contact
+          </S.MenuItem>
+        </S.Menu>
+      </S.Header>
+    </S.HeaderContainer>
+  )
+}
 
 export default SiteHeader

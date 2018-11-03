@@ -1,33 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import 'antd/dist/antd.css'
-import { Layout as LayoutAntd, Row, Col } from 'antd'
+import { Link } from 'gatsby'
 import SiteMetadata from './SiteMetadata'
+import BrightFutureImage from './BrightFutureImage'
 import SiteHeader from './SiteHeader'
-import SiteFooter from './SiteFooter'
+import SiteContent from './SiteContent'
+import * as S from './Layout.style'
 
-const { Content } = LayoutAntd
-
-const ContentSC = styled(Content)`
-  padding: 100px 30px;
-  margin-top: 0px;
-  min-height: 400px;
-  background-color: white;
-`
-const Layout = ({ children }) => (
-  <>
+const Layout = ({ location, children }) => (
+  <React.Fragment>
     <SiteMetadata />
-    <Row>
-      <Col span={18} offset={3}>
-        <LayoutAntd>
-          <SiteHeader />
-          <ContentSC>{children}</ContentSC>
-          <SiteFooter />
-        </LayoutAntd>
-      </Col>
-    </Row>
-  </>
+
+    <SiteHeader location={location} />
+
+    <SiteContent>{children}</SiteContent>
+
+    <S.FooterContainer>
+      <S.Footer>
+        <p>Bright Future Child Enrichment Center ©2018</p>
+        <p>COPY RIGHT, BITCHES</p>
+      </S.Footer>
+    </S.FooterContainer>
+  </React.Fragment>
 )
 
 Layout.propTypes = {
