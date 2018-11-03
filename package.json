@@ -3,9 +3,22 @@
   "description": "Bright Future Daycare Site",
   "version": "1.0.0",
   "author": "Rob Hilgefort <rjhilgefort@gmail.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://bitbucket.org/rjhilgefort/bright-future.git"
+  },
+  "keywords": [
+    "daycare",
+    "future",
+    "bright"
+  ],
+  "scripts": {
+    "start": "yarn develop",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "lint": "yarn lint:fix",
+    "lint:fix": "prettier-standard '**/*.{js,jsx}'"
   },
   "dependencies": {
     "antd": "^3.10.3",
@@ -22,18 +35,7 @@
     "react-helmet": "^5.2.0",
     "styled-components": "^4.0.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "start": "yarn develop",
-    "develop": "gatsby develop",
-    "build": "gatsby build",
-    "lint": "yarn lint:fix",
-    "lint:fix": "prettier --write \"src/**/*.{js,jsx}\""
-  },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "prettier-standard": "^8.0.1"
   }
 }
