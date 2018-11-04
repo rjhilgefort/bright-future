@@ -51,9 +51,7 @@ export const MenuItem = styled(Link)`
     ${activeMenuItem};
   }
 
-  ${x =>
-    x.active &&
-    css`
-      ${activeMenuItem};
-    `};
+  ${x => x.active && css`
+    ${activeMenuItem};
+  `};
 `
