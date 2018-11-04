@@ -17,7 +17,6 @@ const Layout = ({ location, children }) => (
     <SiteContent>{children}</SiteContent>
 
     <SiteFooter />
-
   </React.Fragment>
 )
 

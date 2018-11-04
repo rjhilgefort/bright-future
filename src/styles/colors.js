@@ -10,5 +10,5 @@ export const secondary = yellow
 
 export const PRIMARY = primary.hex()
 export const PRIMARY_LIGHT = primaryLight.hex()
-export const INACTIVE =  primaryLight.hex()
+export const INACTIVE = primaryLight.hex()
 export const SECONDARY = secondary.hex()

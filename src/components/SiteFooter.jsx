@@ -4,13 +4,13 @@ import styled from 'styled-components'
 import { pageblockContainer, pageblockOffset } from '../styles/mixins'
 
 export const FooterContainer = styled.div`
-    ${pageblockContainer};
+  ${pageblockContainer};
 `
 
 export const Footer = styled.div`
-    ${pageblockOffset};
-    display: flex;
-    justify-content: center;
+  ${pageblockOffset};
+  display: flex;
+  justify-content: center;
 `
 
 const FooterContent = () => (
