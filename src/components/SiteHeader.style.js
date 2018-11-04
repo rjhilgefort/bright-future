@@ -1,7 +1,9 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
-import { pageblockContainer, pageblockOffset } from '../styles'
-import { primary } from '../styles/colors'
+import * as _ from 'ramda'
+import { pageblockContainer, pageblockOffset } from '../styles/mixins'
+import { PRIMARY, INACTIVE } from '../styles/colors'
+import { activeTern } from '../styles/utils'
 
 const logoSize = 100
 
@@ -31,27 +33,22 @@ export const Menu = styled.div`
   height: 100%;
 `
 
-const activeMenuItem = `
-  border-bottom: 4px solid ${primary};
+const activeStyle = (active) => `
+  color: ${active ? PRIMARY : INACTIVE};
+  border-bottom: 5px solid ${active ? PRIMARY : 'transparent'};
 `
 export const MenuItem = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 25px;
-  border-bottom: 5px solid transparent;
 
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 400;
 
-  color: ${primary};
+  ${_.compose(activeStyle, _.propEq('active', 1))}
 
   &:hover {
-    color: ${primary};
-    ${activeMenuItem};
+    ${activeStyle(true)};
   }
-
-  ${x => x.active && css`
-    ${activeMenuItem};
-  `};
 `

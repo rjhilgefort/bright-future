@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import 'antd/dist/antd.css'
 import { Link } from 'gatsby'
 import SiteMetadata from './SiteMetadata'
 import BrightFutureImage from './BrightFutureImage'
 import SiteHeader from './SiteHeader'
 import SiteContent from './SiteContent'
-import * as S from './Layout.style'
+import SiteFooter from './SiteFooter'
 
 const Layout = ({ location, children }) => (
   <React.Fragment>
@@ -15,12 +16,8 @@ const Layout = ({ location, children }) => (
 
     <SiteContent>{children}</SiteContent>
 
-    <S.FooterContainer>
-      <S.Footer>
-        <p>Bright Future Child Enrichment Center ©2018</p>
-        <p>COPY RIGHT, BITCHES</p>
-      </S.Footer>
-    </S.FooterContainer>
+    <SiteFooter />
+
   </React.Fragment>
 )
 

@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { pageblockContainer, pageblockOffset } from '../styles'
+import { pageblockContainer, pageblockOffset } from '../styles/mixins'
 
 export const ContentContainer = styled.div`
   ${pageblockContainer};
+  margin-top: 20px;
 `
 
 export const Content = styled.div`
@@ -13,7 +14,9 @@ export const Content = styled.div`
 
 const SiteContent = ({ children }) => (
   <ContentContainer>
-    <Content>{children}</Content>
+    <Content>
+      {children}
+    </Content>
   </ContentContainer>
 )
 
