@@ -1,4 +1,5 @@
-export const pageWidth = 1200
+import { PAGE_WIDTH } from './variables'
+import { PRIMARY, SECONDARY, WHITE } from './colors'
 
 export const pageblockContainer = `
   display: flex;
@@ -7,7 +8,15 @@ export const pageblockContainer = `
 `
 
 export const pageblockOffset = `
+  max-width: ${PAGE_WIDTH}px;
   width: calc(100% - 2rem);
-  max-width: ${pageWidth}px;
   padding: 0 1rem 0 1rem;
 `
+
+export const whiteOnOrange = `
+  background-color: ${PRIMARY};
+  color: ${WHITE};
+  font-size: 16px;
+`
+
+// text-shadow: -1px 0 ${SECONDARY}, 0 1px ${SECONDARY}, 1px 0 ${SECONDARY}, 0 -1px ${SECONDARY};

@@ -28,7 +28,7 @@ const CarouselSC = styled(Carousel)`
 
 const TourCarousel = () => (
   <CarouselContainer>
-    <CarouselSC autoplay effect="fade">
+    <CarouselSC autoplay dots vertical effect="fade">
       <img src={pic1} />
       <img src={pic2} />
       <img src={pic3} />

@@ -4,11 +4,11 @@ import * as _ from 'ramda'
 import { pageblockContainer, pageblockOffset } from '../styles/mixins'
 import { PRIMARY, INACTIVE } from '../styles/colors'
 import { activeTern } from '../styles/utils'
-
-const logoSize = 100
+import { LOGO_SIZE } from '../styles/variables'
 
 export const HeaderContainer = styled.div`
   ${pageblockContainer};
+  margin-bottom: 30px;
 `
 
 export const Header = styled.div`
@@ -21,8 +21,8 @@ export const Header = styled.div`
 `
 
 export const LogoContainer = styled.div`
-  width: ${logoSize}px;
-  height: ${logoSize}px;
+  width: ${LOGO_SIZE}px;
+  height: ${LOGO_SIZE}px;
   margin: 0 10px 0 0;
 `
 
@@ -33,7 +33,7 @@ export const Menu = styled.div`
   height: 100%;
 `
 
-const activeStyle = (active) => `
+const activeStyle = active => `
   color: ${active ? PRIMARY : INACTIVE};
   border-bottom: 5px solid ${active ? PRIMARY : 'transparent'};
 `

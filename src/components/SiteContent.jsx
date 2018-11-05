@@ -5,7 +5,6 @@ import { pageblockContainer, pageblockOffset } from '../styles/mixins'
 
 export const ContentContainer = styled.div`
   ${pageblockContainer};
-  margin-top: 40px;
 `
 
 export const Content = styled.div`

@@ -1,23 +1,31 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { pageblockContainer, pageblockOffset } from '../styles/mixins'
+import {
+  pageblockContainer,
+  pageblockOffset,
+  whiteOnOrange,
+} from '../styles/mixins'
 
-export const FooterContainer = styled.div`
-  ${pageblockContainer};
+const FooterContainer = styled.div`
+  ${pageblockContainer} ${whiteOnOrange}
+  margin-top: 20px;
 `
 
-export const Footer = styled.div`
+const Footer = styled.div`
   ${pageblockOffset};
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
 `
+
+const Item = styled.div``
 
 const FooterContent = () => (
   <FooterContainer>
     <Footer>
-      <p>Bright Future Child Enrichment Center ©2018</p>
-      <p>COPY RIGHT, BITCHES</p>
+      <Item>Bright Future Child Enrichment Center ©2018</Item>
+      <Item>COPY RIGHT, BITCHES</Item>
     </Footer>
   </FooterContainer>
 )

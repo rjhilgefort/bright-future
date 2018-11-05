@@ -5,9 +5,11 @@ import * as _ from 'ramda'
 import BrightFutureImage from './BrightFutureImage'
 import * as S from './SiteHeader.style'
 
+const boolToNum = x => (x ? 1 : 0)
+
 const SiteHeader = ({ location: { pathname } }) => {
   const isActive = _.compose(
-    x => (x ? 1 : 0),
+    boolToNum,
     _.equals(pathname),
   )
 
