@@ -19,4 +19,5 @@ export const whiteOnOrange = `
   font-size: 16px;
 `
 
-// text-shadow: -1px 0 ${SECONDARY}, 0 1px ${SECONDARY}, 1px 0 ${SECONDARY}, 0 -1px ${SECONDARY};
+export const textShadow = color =>
+  `text-shadow: -1px 0 ${color}, 0 1px ${color}, 1px 0 ${color}, 0 -1px ${color};`

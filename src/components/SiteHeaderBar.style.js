@@ -5,12 +5,14 @@ import {
   pageblockContainer,
   pageblockOffset,
   whiteOnOrange,
+  textShadow,
 } from '../styles/mixins'
+import { WHITE, BLUE } from '../styles/colors'
 
 export const HeaderBarContainer = styled.div`
   ${pageblockContainer}
   ${whiteOnOrange}
-  font-weight: 600;
+  font-weight: 800;
 `
 
 export const HeaderBar = styled.div`
@@ -35,9 +37,17 @@ export const contactItemMargin = `
 
 export const SocialIcon = styled(Icon)`
   ${contactItemMargin}
-  font-size: 26px;
+  font-size: 30px;
+  color: ${WHITE};
+  margin-top: 2px;
+  padding: 0;
+`
+
+const FACEBOOK_BLUE = '#3b5998'
+export const FacebookIcon = styled(SocialIcon)`
   &:hover {
-    cursor: pointer;
+    color: ${FACEBOOK_BLUE};
+    background-color: ${WHITE};
   }
 `
 
@@ -45,5 +55,5 @@ export const ContactButton = withProps({ ghost: false })(styled(Button)`
   ${contactItemMargin}
   height: auto;
   font-weight: 500;
-  padding: 0px 8px;
+  padding: 0 8px;
 `)

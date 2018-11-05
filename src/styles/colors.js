@@ -2,8 +2,10 @@ import Color from 'color'
 
 export const orange = Color('orange')
 export const yellow = Color('yellow')
-export const blue = Color('blue')
 export const grey = Color('grey').lighten(0.5)
+
+export const blue = Color('blue')
+export const BLUE = blue.hex()
 
 export const white = Color('white')
 export const WHITE = white.hex()
