@@ -1,5 +1,7 @@
 import Color from 'color'
 
+// https://github.com/Qix-/color
+
 export const orange = Color('orange')
 export const yellow = Color('yellow')
 export const grey = Color('grey').lighten(0.5)

@@ -37,13 +37,13 @@ const activeStyle = active => `
   color: ${active ? PRIMARY : INACTIVE};
   border-bottom: 5px solid ${active ? PRIMARY : 'transparent'};
 `
-export const MenuItem = styled(Link)`
+export const MenuLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 25px;
 
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 400;
 
   ${_.compose(activeStyle, _.propEq('active', 1))}

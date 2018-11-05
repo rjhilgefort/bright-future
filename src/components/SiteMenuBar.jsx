@@ -8,7 +8,7 @@ import {
   MenuBar,
   LogoContainer,
   Menu,
-  MenuItem,
+  MenuLink,
 } from './SiteMenuBar.style'
 
 const boolToNum = x => (x ? 1 : 0)
@@ -17,6 +17,10 @@ const SiteMenuBar = ({ location: { pathname } }) => {
   const isActive = _.compose(
     boolToNum,
     _.equals(pathname),
+  )
+
+  const MenuItem = ({ to, children }) => (
+    <MenuLink to={to} active={isActive(to)}>{children}</MenuLink>
   )
 
   return (
@@ -29,16 +33,10 @@ const SiteMenuBar = ({ location: { pathname } }) => {
         </LogoContainer>
 
         <Menu>
-          <MenuItem to="/" active={isActive('/')}>
-            Home
-          </MenuItem>
+          <MenuItem to="/">Home</MenuItem>
           {/*
-          <MenuItem to="/about" active={isActive('/about')}>
-            About
-          </MenuItem>
-          <MenuItem to="/contact" active={isActive('/contact')}>
-            Contact
-          </MenuItem>
+          <MenuItem to="/about">About</MenuItem>
+          <MenuItem to="/contact">Contact</MenuItem>
           */}
         </Menu>
       </MenuBar>
