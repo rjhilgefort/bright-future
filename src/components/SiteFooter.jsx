@@ -7,16 +7,18 @@ import {
 } from '../styles/mixins'
 
 const FooterContainer = styled.div`
-  ${pageblockContainer} ${whiteOnOrange}
-  margin-top: 20px;
+  ${pageblockContainer}
+  ${whiteOnOrange}
+  margin-top: 25px;
 `
 
 const Footer = styled.div`
   ${pageblockOffset};
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   height: 50px;
+  font-weight: 600;
 `
 
 const Item = styled.div``
@@ -25,7 +27,6 @@ const FooterContent = () => (
   <FooterContainer>
     <Footer>
       <Item>Bright Future Child Enrichment Center ©2018</Item>
-      <Item>COPY RIGHT, BITCHES</Item>
     </Footer>
   </FooterContainer>
 )

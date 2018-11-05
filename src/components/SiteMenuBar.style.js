@@ -6,12 +6,12 @@ import { PRIMARY, INACTIVE } from '../styles/colors'
 import { activeTern } from '../styles/utils'
 import { LOGO_SIZE } from '../styles/variables'
 
-export const HeaderContainer = styled.div`
+export const MenuBarContainer = styled.div`
   ${pageblockContainer};
   margin-bottom: 30px;
 `
 
-export const Header = styled.div`
+export const MenuBar = styled.div`
   ${pageblockOffset};
   display: flex;
   flex-direction: row;

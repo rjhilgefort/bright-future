@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import SiteMetadata from './SiteMetadata'
 import BrightFutureImage from './BrightFutureImage'
 import SiteHeaderBar from './SiteHeaderBar'
-import SiteHeader from './SiteHeader'
+import SiteMenuBar from './SiteMenuBar'
 import SiteContent from './SiteContent'
 import SiteFooter from './SiteFooter'
 
@@ -14,7 +14,7 @@ const Layout = ({ location, children }) => (
     <SiteMetadata />
 
     <SiteHeaderBar />
-    <SiteHeader location={location} />
+    <SiteMenuBar location={location} />
 
     <SiteContent>{children}</SiteContent>
 
