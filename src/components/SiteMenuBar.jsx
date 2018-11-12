@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import * as _ from 'ramda'
+import * as U from '../lib/utils'
 import BrightFutureImage from './BrightFutureImage'
 import {
   MenuBarContainer,
@@ -11,11 +12,9 @@ import {
   MenuLink,
 } from './SiteMenuBar.style'
 
-const boolToNum = x => (x ? 1 : 0)
-
 const SiteMenuBar = ({ location: { pathname } }) => {
   const isActive = _.compose(
-    boolToNum,
+    U.boolToNum,
     _.equals(pathname),
   )
 
