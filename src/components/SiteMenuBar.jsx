@@ -20,7 +20,9 @@ const SiteMenuBar = ({ location: { pathname } }) => {
   )
 
   const MenuItem = ({ to, children }) => (
-    <MenuLink to={to} active={isActive(to)}>{children}</MenuLink>
+    <MenuLink to={to} active={isActive(to)}>
+      {children}
+    </MenuLink>
   )
 
   return (
@@ -34,9 +36,9 @@ const SiteMenuBar = ({ location: { pathname } }) => {
 
         <Menu>
           <MenuItem to="/">Home</MenuItem>
+          <MenuItem to="/contact">Contact</MenuItem>
           {/*
           <MenuItem to="/about">About</MenuItem>
-          <MenuItem to="/contact">Contact</MenuItem>
           */}
         </Menu>
       </MenuBar>

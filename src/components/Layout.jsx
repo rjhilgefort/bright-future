@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import 'antd/dist/antd.css'
 import { Link } from 'gatsby'
@@ -10,7 +10,7 @@ import SiteContent from './SiteContent'
 import SiteFooter from './SiteFooter'
 
 const Layout = ({ location, children }) => (
-  <React.Fragment>
+  <Fragment>
     <SiteMetadata />
 
     <SiteHeaderBar />
@@ -19,7 +19,7 @@ const Layout = ({ location, children }) => (
     <SiteContent>{children}</SiteContent>
 
     <SiteFooter />
-  </React.Fragment>
+  </Fragment>
 )
 
 Layout.propTypes = {

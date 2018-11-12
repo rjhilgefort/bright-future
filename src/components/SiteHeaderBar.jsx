@@ -11,7 +11,7 @@ import {
 import LinkExt from './LinkExt'
 
 const FacebookLink = withProps({
-  to: "https://www.facebook.com/Bright.Future.Child.Enrichment.Center/",
+  to: 'https://www.facebook.com/Bright.Future.Child.Enrichment.Center/',
 })(LinkExt)
 
 const EmailLink = withProps({
@@ -21,7 +21,7 @@ const EmailLink = withProps({
 
 const PhoneLink = withProps({
   icon: 'phone',
-  href: "tel:8593413350",
+  href: 'tel:8593413350',
 })(ContactButton)
 
 const HeaderBarContent = () => (

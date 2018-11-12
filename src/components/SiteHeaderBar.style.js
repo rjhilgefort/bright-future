@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { withProps } from 'recompose'
-import { Icon, Button } from 'antd';
+import { Icon, Button } from 'antd'
 import {
   pageblockContainer,
   pageblockOffset,
@@ -23,8 +23,7 @@ export const HeaderBar = styled.div`
   align-items: center;
 `
 
-export const Item = styled.div`
-`
+export const Item = styled.div``
 
 export const Contact = styled(Item)`
   display: flex;
@@ -33,7 +32,7 @@ export const Contact = styled(Item)`
 
 export const contactItemMargin = `
   margin-right: 10px;
-`;
+`
 
 export const SocialIcon = styled(Icon)`
   ${contactItemMargin}
